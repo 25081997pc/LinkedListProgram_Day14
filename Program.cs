@@ -13,7 +13,11 @@
 
             list.Display();
 
-            list.RemoveFirstNode();
+            //list.RemoveFirstNode();
+            //Console.WriteLine("------");
+            //list.Display();
+
+            list.RemoveLastNode();
             Console.WriteLine("------");
             list.Display();
             List<Node> nodes = new List<Node>();
