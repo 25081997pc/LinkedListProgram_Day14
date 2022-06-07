@@ -9,7 +9,8 @@ namespace LinkedListDemo
     public class LinkedList
     {
         public Node head;
-       
+        private int positon;
+
         public void Add(int data)
         {
             Node node = new Node(data);
@@ -110,7 +111,7 @@ namespace LinkedListDemo
                         temp = temp.next;
                     }
                 }
-                if(temp!=null)
+                if (temp != null)
                 {
                     newNode.next = temp.next;
                     temp.next = newNode;
@@ -121,6 +122,41 @@ namespace LinkedListDemo
                 }
             }
                        
+        }
+        public void pop_at(int position)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("\nposition should be >= 1.");
+            }
+            else if (position == 1 && head != null)
+            {
+                Node nodeToDelete = head;
+                head = head.next;
+                nodeToDelete = null;
+            }
+            else
+            {
+                Node temp = new Node();
+                temp = head;
+                for (int i = 1; i < position-1; i++)
+                {
+                    if (temp != null)
+                    {
+                        temp = temp.next;
+                    }
+                }
+                if (temp != null && temp.next != null)
+                {
+                    Node nodeToDelete = temp.next;
+                    temp.next = temp.next.next;
+                    nodeToDelete = null;
+                }
+                else
+                {
+                    Console.WriteLine("\nThe node is already null");
+                }
+            }
         }
     }
     
