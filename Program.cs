@@ -17,9 +17,14 @@
             //Console.WriteLine("------");
             //list.Display();
 
-            list.RemoveLastNode();
+            //list.RemoveLastNode();
+            //Console.WriteLine("------");
+            //list.Display();
+
+            list.Search(30);
             Console.WriteLine("------");
             list.Display();
+
             List<Node> nodes = new List<Node>();
           
         }
