@@ -73,6 +73,18 @@ namespace LinkedListDemo
             NewNode.next = null;
             return head;
         }
+        internal Node Search(int value)
+        {
+            while(this.head != null)
+            {
+                if(this.head.data == value)
+                {
+                    return this.head;
+                }
+                this.head = this.head.next;
+            }
+            return null;
+        }
 
     }
     
