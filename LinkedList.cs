@@ -8,7 +8,8 @@ namespace LinkedListDemo
 {
     public class LinkedList
     {
-        internal Node head;
+        public Node head;
+        public Node tail;
         public void Add(int data)
         {
             Node node = new Node(data);
@@ -27,7 +28,7 @@ namespace LinkedListDemo
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
-
+       
         public void Display()
         {
             Node temp = this.head;
@@ -44,7 +45,8 @@ namespace LinkedListDemo
                   temp = temp.next;
             }
             
-        }
+        } 
+        
     }
     
 }
