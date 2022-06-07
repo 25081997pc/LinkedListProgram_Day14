@@ -29,7 +29,11 @@
             list.insertAtPosition(40, 3);
             Console.WriteLine("List");
             list.Display();
-          
+
+            list.pop_at(3);
+            Console.WriteLine("List");
+            list.Display();
+
         }
     }
 }
