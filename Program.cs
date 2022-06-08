@@ -17,7 +17,7 @@
             linked.Append(56);
             linked.Append(30);
             linked.Append(70);
-            Console.WriteLine("Appending 30 and 56 to 70 in LinkedList is: ");
+            Console.WriteLine("Appending 30 and 70 to 56 in LinkedList is: ");
             linked.Display();
 
             //List<Node> nodes = new List<Node>();
