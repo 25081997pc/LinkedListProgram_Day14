@@ -61,6 +61,26 @@ namespace LinkedListDemo
             }
             
         }
+        public void Insert(int value)
+        {
+            Node node = new Node(value);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                var temp = this.head;
+                var middle = this.head;
+                //find the middle node
+                while(temp.next!=null&&temp.next.next!=null)
+                {
+                    temp = temp.next.next;
+                    middle = middle.next;
+                }
+                //add node
+                node.next = middle.next;
+                middle.next = node;
+            }
+        }
        
     }
 
